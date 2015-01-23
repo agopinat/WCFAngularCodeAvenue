@@ -1,0 +1,63 @@
+﻿<html data-ng-app="RESTClientModule">
+
+@{
+    ViewBag.Title = "Product List";
+}
+
+<h2>Product List</h2>
+
+<p>
+</p>
+<body>
+    <table id="tableContainer" class="table" data-ng-controller="CRUD_AngularJS_RestController">
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Price in USD
+            </th>
+            <th>
+                Car
+            </th>
+            <th>
+                Image
+            </th>
+            <th></th>
+        </tr>
+
+        <tbody data-ng-repeat="prod in products">
+            <tr>
+                <td>
+                    <span>
+                        {{prod.Name}}
+                    </span>
+                </td>
+                <td>
+                    <span>
+                        {{prod.Price}}
+                    </span>
+                </td>
+                <td>
+                    <span>
+                        {{prod.Car}}
+                    </span>
+                </td>
+                <td>
+                    <span>
+                        {{prod.Image}}
+                    </span>
+                </td>
+                <td>
+                    @*<a href="@Url.Action("Create", "Cart", new { id = item.ProductID })">Add to Cart <span class="glyphicon glyphicon-shopping-cart"></span></a>*@
+                </td>
+            </tr>
+    </table>
+</body>
+</html>
+
+<script src="~/Scripts/angular.js"></script>
+<script src="~/Scripts/angular-resource.js"></script>
+<script src="~/Scripts/MyScripts/Module.js"></script>
+<script src="~/Scripts/MyScripts/Services.js"></script>
+<script src="~/Scripts/MyScripts/Controller.js"></script> 
